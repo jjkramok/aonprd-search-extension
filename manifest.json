@@ -1,0 +1,26 @@
+{
+
+  "manifest_version": 2,
+  "name": "AoN PRD search omnibox",
+  "description": "Adds a search engine that searches aonprd.com",
+  "version": "1.0",
+  "browser_specific_settings": {
+    "gecko": {
+      "strict_min_version": "55"
+    }
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "omnibox": { "keyword" : "a" },
+  "chrome_settings_overrides": {
+    "search_provider": {
+      "name": "AoN PRD Search",
+      "search_url": "https://aonprd.com/Search.aspx?Query={searchTerms}&Filter=111111111111111111&AllTerms=True&OneLine=False&ExcludeAPModule=False&PFSLegalOnly=False",
+      "keyword": "ac",
+      "favicon_url": "https://www.google.com/s2/favicons?domain=aonprd.com",
+      "is_default": false,
+      "encoding": "UTF-8"
+    }
+  }
+}
